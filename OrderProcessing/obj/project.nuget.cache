@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OE5XMu0+o6bz1kNP17zHwSKjaxrc3aEcNr4BdXlvUqHEffrGXEmvwGb2ZvBkh/1gaOAUYbsrrECc8c0BKB+gtg==",
+  "dgSpecHash": "f788lE+B2jaNSZWkoD0O54rh8n3eb8qC9RHUyHGAkhY8pDpNuB0QtV6mLaMuf1/egF+UnmzzI6u0ZKrvqV2Vig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maher\\Desktop\\PRJ7\\wao-exam\\OrderProcessing app2\\OrderProcessing\\OrderProcessing.csproj",
+  "projectFilePath": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\OrderProcessing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maher\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\maher\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
