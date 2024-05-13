@@ -14,14 +14,14 @@ WORKDIR /src
 
 COPY ["OrderProcessing/OrderProcessing.csproj", "."]
 
-RUN dotnet restore "OrderProcessing/OrderProcessing.csproj"
+RUN dotnet restore "./OrderProcessing.csproj"
 
 COPY . .
-WORKDIR "/src/" 
-RUN dotnet build "OrderProcessing.csproj" -c Release  
+WORKDIR "/src/OrderProcessing" 
+RUN dotnet build -c Release  
 
 FROM build AS publish
-RUN dotnet publish "OrderProcessing.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
