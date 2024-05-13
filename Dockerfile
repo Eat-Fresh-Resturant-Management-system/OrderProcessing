@@ -12,7 +12,7 @@ USER appuser
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY ["OrderProcessing.csproj", "."]
+COPY ["OrderProcessing/OrderProcessing.csproj", "."]
 
 RUN dotnet restore "OrderProcessing.csproj"
 

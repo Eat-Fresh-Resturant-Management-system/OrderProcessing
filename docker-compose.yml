@@ -1,19 +1,10 @@
 ﻿version: '3.8'
 
-networks:
-  EatFresh_network:
-    driver: bridge
-
-services:
-
-
-    
+services:    
   OrderApp:
     image: orderprocessingimage
     depends_on:
       - db-OrderApp2
-      - rabbitmq
-
     restart: always
     build:
       context: .
@@ -24,9 +15,6 @@ services:
       ASPNETCORE_ENVIRONMENT: 'Development'
       CONNECTION_STRING: 'Server=db-OrderApp2,1433;Database=Orderbd62;User=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=True'
       PRODUCT_CATALOG_SERVICE_URI: 'http://productcatalog:5200/recommendation'
-    networks:
-      - EatFresh_network
-
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
   db-OrderApp2:
@@ -39,10 +27,5 @@ services:
     environment:
       SA_PASSWORD: "<YourStrong@Passw0rd>"
       ACCEPT_EULA: "Y"
-    networks:
-      - EatFresh_network
-
-
-
 volumes:
   OrderApp:
