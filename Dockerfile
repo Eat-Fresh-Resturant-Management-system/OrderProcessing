@@ -14,7 +14,7 @@ WORKDIR /src
 
 COPY ["OrderProcessing/OrderProcessing.csproj", "."]
 
-RUN dotnet restore "OrderProcessing.csproj"
+RUN dotnet restore "OrderProcessing/OrderProcessing.csproj"
 
 COPY . .
 WORKDIR "/src/" 
