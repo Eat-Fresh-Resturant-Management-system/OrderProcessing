@@ -13,19 +13,14 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 COPY ["OrderProcessing/OrderProcessing.csproj", "OrderProcessing/"]
-
-
 RUN dotnet restore "OrderProcessing/OrderProcessing.csproj"
 
 
 COPY . .
 WORKDIR "/src/OrderProcessing" 
 RUN dotnet build "OrderProcessing.csproj" -c Release -o /app/build
-
-
 FROM build AS publish
 RUN dotnet publish "OrderProcessing.csproj" -c Release -o /app/publish /p:UseAppHost=false
-
 
 FROM base AS final
 WORKDIR /app
