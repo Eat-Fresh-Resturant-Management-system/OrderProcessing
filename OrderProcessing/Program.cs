@@ -61,10 +61,10 @@ if (app.Environment.IsDevelopment())
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<Order_Db>();
     db.Database.EnsureCreated();
+
+}
     app.UseSwagger();
     app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
 app.UseCors();
 

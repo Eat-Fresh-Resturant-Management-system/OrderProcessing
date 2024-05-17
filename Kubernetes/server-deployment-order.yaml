@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server-deployment
+  name: server-deployment-order
   namespace: eatfresh
   labels:
-    app: webapi
+    app: weborder
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webapi
+      app: weborder
   template:
     metadata:
       labels:
-        app: webapi
+        app: weborder
     spec:
       containers:
-      - name: webapi
-        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.menumanagement:v.0.0.7
+      - name: weborder
+        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:v.0.0.1
         ports:
-        - containerPort: 5136
+        - containerPort: 5126
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: Production

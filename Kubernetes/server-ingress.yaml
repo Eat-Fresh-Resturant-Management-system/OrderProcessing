@@ -14,7 +14,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/grp-13/webmenuapi(/|$)(.*)"
+        path: "/grp-13//grp-13/order(/|$)(.*)"
         backend:
           service:
             name: server-service
