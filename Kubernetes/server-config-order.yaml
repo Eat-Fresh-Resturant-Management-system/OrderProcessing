@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: server-config-order
-  namespace: eatfresh
+  namespace: app
 data:
   appsettings.json: |-
     {

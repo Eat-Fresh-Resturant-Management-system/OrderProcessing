@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sql-deployment-order
-  namespace: eatfresh
+  namespace: app
 spec:
   replicas: 1
   selector:
@@ -44,4 +44,4 @@ spec:
       volumes:
       - name: sql-persistent-storage-order
         persistentVolumeClaim:
-          claimName: sql-pvc-order
+          claimName: ordersql-pvc

@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: server-deployment-order
-  namespace: eatfresh
+  namespace: app
   labels:
-    app: weborder
+    app: weborder-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: weborder
+      app: weborder-pod
   template:
     metadata:
       labels:
-        app: weborder
+        app: weborder-pod
     spec:
       containers:
       - name: weborder
-        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:0.0.03.v
+        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:0.0.04.v
         ports:
         - containerPort: 5126
         env:

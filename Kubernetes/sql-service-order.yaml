@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sql-service-order
-  namespace: eatfresh
+  namespace: app
 spec:
   selector:
     app: sqlserver-order
   ports:
     - protocol: TCP
-      port: 1422
-      targetPort: 1422
+      port: 1433
+      targetPort: 1433
