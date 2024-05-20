@@ -8,5 +8,5 @@ spec:
     app: sqlserver-order
   ports:
     - protocol: TCP
-      port: 1433
-      targetPort: 1433
+      port: 1422
+      targetPort: 1422

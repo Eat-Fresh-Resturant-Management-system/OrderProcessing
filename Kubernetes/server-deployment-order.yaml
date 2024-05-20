@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: weborder
-        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:0.1v
+        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:0.0.01.v
         ports:
         - containerPort: 5126
         env:
