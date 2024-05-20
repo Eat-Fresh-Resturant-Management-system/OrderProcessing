@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: sql-volume-pv-order
+  name: order-volume-pv
 spec:
-  storageClassName: "local-path"
+  storageClassName: "nfs-client"
   capacity:
     storage: 1Gi
   accessModes:

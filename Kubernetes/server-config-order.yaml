@@ -7,7 +7,7 @@ data:
   appsettings.json: |-
     {
       "ConnectionStrings": {
-        "DefaultConnection": "Server=sql-service-order,1422;Database=Orderbd62;User=sa;Password=Orderwao;TrustServerCertificate=True"
+        "DefaultConnection": "Server=sql-service,1433;Database=Orderbd62;User=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=True"
       },
       "Logging": {
         "LogLevel": {
