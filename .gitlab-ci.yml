@@ -3,6 +3,7 @@ variables:
   BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
   BOT_EMAIL: "au648718@uni.au.dk" # Bot's email, not important
 
+
 build:
   # Use the official docker image.
   image: griefed/docker-with-buildx:latest
