@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: weborder
-        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:v.0.0.1
+        image: registry.gitlab.au.dk/wao-exercises1/eatfresh/eatfresh.orderprocessing:0.1v
         ports:
         - containerPort: 5126
         env:
@@ -26,12 +26,12 @@ spec:
         - name: ACCEPT_EULA
           valueFrom:
             secretKeyRef:
-              name: sql-secret
+              name: sql-secret-order
               key: ACCEPT_EULA
         - name: MSSQL_SA_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: sql-secret
+              name: sql-secret-order
               key: MSSQL_SA_PASSWORD
         - name: RABBITMQ_HOST
           value: rabbitmq.eatfresh.svc.cluster.local

@@ -11,25 +11,19 @@ using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-var server = Environment.GetEnvironmentVariable("DB_SERVER");
-var database = Environment.GetEnvironmentVariable("DB_NAME");
-var user = Environment.GetEnvironmentVariable("DB_USER");
-var password = Environment.GetEnvironmentVariable("DB_PASSWORD");
-var connectionString = $"Server={server},1433;Database={database};User={user};Password={password};TrustServerCertificate=True";
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<Order_Db>(options =>
- options.UseSqlServer(connectionString, options =>
- {
-     options.EnableRetryOnFailure(maxRetryCount: 9, maxRetryDelay: TimeSpan.FromSeconds(2),
-         errorNumbersToAdd: null);
- })
-);
-
-ServiceLifetime.Singleton); // Tilføj denne linje for at angive levetiden som singleton
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlServerOptionsAction: sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure();
+        }),
+    ServiceLifetime.Singleton);
+// Tilføj denne linje for at angive levetiden som singleton
 builder.Services.AddSingleton<IRabbitMQ, RabbitMQUnti>();
 builder.Services.AddHostedService<RabbitMqServicecs>();
 
