@@ -49,12 +49,12 @@ spec:
             cpu: "600m"
             memory: "128Mi"
         volumeMounts:
-        - name: config-volume
+        - name: config-volume-order
           mountPath: /app/appsettings.json
           subPath: appsettings.json
       volumes:
-      - name: config-volume
+      - name: config-volume-order
         configMap:
-          name: server-config
+          name: server-config-order
       imagePullSecrets:
       - name: my-registry-credentials

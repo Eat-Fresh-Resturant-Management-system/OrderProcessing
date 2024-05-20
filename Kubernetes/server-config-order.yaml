@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: server-config
+  name: server-config-order
   namespace: eatfresh
 data:
   appsettings.json: |-
     {
       "ConnectionStrings": {
-        "DefaultConnection": "Server=db-OrderApp2,1433;Database=Orderbd62;User=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=True"
+        "DefaultConnection": "Server=db-OrderApp2,1433;Database=Orderbd62;User=sa;Password=Orderwao;TrustServerCertificate=True"
       },
       "Logging": {
         "LogLevel": {

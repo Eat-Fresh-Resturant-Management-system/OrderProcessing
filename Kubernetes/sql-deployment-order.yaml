@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sql-deployment
+  name: sql-deployment-order
   namespace: eatfresh
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sqlserver
+      app: sqlserver-order
   template:
     metadata:
       labels:
-        app: sqlserver
+        app: sqlserver-order
     spec:
       containers:
-      - name: sqlserver
+      - name: sqlserver-order
         image: mcr.microsoft.com/mssql/server:2019-latest
         ports:
         - containerPort: 1433
@@ -24,24 +24,24 @@ spec:
         - name: ACCEPT_EULA
           valueFrom:
             secretKeyRef:
-              name: sql-secret
+              name: sql-secret-order
               key: ACCEPT_EULA
         - name: MSSQL_SA_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: sql-secret
+              name: sql-secret-order
               key: MSSQL_SA_PASSWORD
         resources:
           requests:
-            cpu: "200m"
-            memory: "1Gi"
+            cpu: "150m"
+            memory: "64Mi"
           limits:
-            cpu: "1"
-            memory: "2Gi"
+            cpu: "600m"
+            memory: "128Mi"
         volumeMounts:
         - mountPath: /var/opt/mssql/data
-          name: sql-persistent-storage
+          name: sql-persistent-storage-order
       volumes:
-      - name: sql-persistent-storage
+      - name: sql-persistent-storage-order
         persistentVolumeClaim:
-          claimName: sql-pvc
+          claimName: sql-pvc-order

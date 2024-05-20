@@ -1,10 +1,14 @@
 ﻿version: '3.8'
+networks:
+  EatFresh_network:
+    driver: bridge
 
-services:    
+services:
   OrderApp:
     image: orderprocessingimage
     depends_on:
       - db-OrderApp2
+      - rabbitmq
     restart: always
     build:
       context: .
@@ -17,6 +21,21 @@ services:
       PRODUCT_CATALOG_SERVICE_URI: 'http://productcatalog:5200/recommendation'
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
+    networks:
+      - EatFresh_network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - "5672:5672" # RabbitMQ port
+      - "15672:15672" # RabbitMQ management UI port
+    environment:
+      RABBITMQ_DEFAULT_USERNAME: guest
+      RABBITMQ_DEFAULT_PASSWORD: guest
+    networks:
+      - EatFresh_network
+    
   db-OrderApp2:
     image: mcr.microsoft.com/mssql/server
     user: root
@@ -27,5 +46,8 @@ services:
     environment:
       SA_PASSWORD: "<YourStrong@Passw0rd>"
       ACCEPT_EULA: "Y"
+    networks:
+      - EatFresh_network
+
 volumes:
   OrderApp:
