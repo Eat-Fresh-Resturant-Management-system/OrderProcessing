@@ -12,7 +12,6 @@ using OrderProcessing.Models;
 
 namespace OrderProcessing.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
     public class OrderItemsController : ControllerBase
@@ -143,45 +142,47 @@ namespace OrderProcessing.Controllers
             return CreatedAtAction("GetOrderItem", new { id = orderItem.OrderItemId }, orderItem);
         }
         [HttpPut("update/{id}")]
-        public async Task<IActionResult> UpdateUserEmail(int id, OrderItemDto orderItemDto)
+        public async Task<IActionResult> UpdateOrderEmail(int id, OrderItemDto orderItemDto)
         {
             _logger.LogInformation("UpdateUser endpoint is called.");
 
-            var user = await _context.OrderItems.FindAsync(id);
-            if (user == null || orderItemDto == null)
+            var order = await _context.OrderItems.FindAsync(id);
+            if (order == null || orderItemDto == null)
             {
                 return NotFound();
             }
 
             if (orderItemDto.Price != null)
             {
-                user.Price = orderItemDto.Price;
+                order.Price = orderItemDto.Price;
             }
 
             if (orderItemDto.Quantity != null)
             {
-                user.Quantity = orderItemDto.Quantity;
+                order.Quantity = orderItemDto.Quantity;
             }
-
             try
             {
                 await _context.SaveChangesAsync();
-                _logger.LogInformation($"Updated user with userId {id}");
+                _logger.LogInformation($"Updated order with orderId {id}");
+                await Task.Delay(10000);
 
-                // Delay for 10 seconds before returning NoContent()
 
                 return NoContent();
+                
             }
+          
             catch (DbUpdateConcurrencyException ex)
             {
-                _logger.LogError("Concurrency conflict occurred while updating user: " + ex.Message);
+
+                _logger.LogError("Concurrency conflict occurred while updating order: " + ex.Message);
 
                 // Reload the entity from the database to get the latest values
                 var entry = ex.Entries.FirstOrDefault();
                 if (entry != null)
                 {
-                    if (user.Price != null) { entry.CurrentValues.SetValues(user.Price); }
-                    if (user.Quantity != null) { entry.CurrentValues.SetValues(user.Quantity); }
+                    if (order.Price != null) { entry.CurrentValues.SetValues(order.Price); }
+                    if (order.Quantity != null) { entry.CurrentValues.SetValues(order.Quantity); }
 
                     _logger.LogInformation($"Concurrency conflict resolved for user with userId {id}");
                     // Optionally, you can check if the entity has been modified by another user before applying changes
@@ -190,13 +191,13 @@ namespace OrderProcessing.Controllers
                     try
                     {
                         await _context.SaveChangesAsync();
-                        _logger.LogInformation($"Concurrency conflict resolved for user with userId {id}");
+                        _logger.LogInformation($"Concurrency conflict resolved for order with orderid {id}");
                         return NoContent();
                     }
                     catch (DbUpdateConcurrencyException)
                     {
                         // Handle concurrency conflict
-                        _logger.LogError($"Failed to resolve concurrency conflict for user with userId {id}");
+                        _logger.LogError($"Failed to resolve concurrency conflict for order with orderid {id}");
                         return StatusCode(409); // Conflict
                     }
                 }

@@ -26,7 +26,7 @@ namespace OrderProcessing.RabbitMQS
             {
               //  Uri = new Uri("amqp://guest:guest@rabbitmq-service:5672"),
 
-                Uri = new Uri("amqp://guest:guest@localhost:5672"),
+                Uri = new Uri("amqp://guest:guest@rabbitmq-service:5672"),
               /* HostName = "localhost",
                UserName = "guest",
                Password = "guest",*/

@@ -24,8 +24,8 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
         }),
     ServiceLifetime.Singleton);
 // Tilføj denne linje for at angive levetiden som singleton
-//builder.Services.AddSingleton<IRabbitMQ, RabbitMQUnti>();
-//builder.Services.AddHostedService<RabbitMqServicecs>();
+builder.Services.AddSingleton<IRabbitMQ, RabbitMQUnti>();
+builder.Services.AddHostedService<RabbitMqServicecs>();
 
 builder.Services.AddAuthentication(options =>
 {

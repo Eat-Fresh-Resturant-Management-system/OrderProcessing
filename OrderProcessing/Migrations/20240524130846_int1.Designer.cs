@@ -12,8 +12,8 @@ using OrderProcessing.Data;
 namespace OrderProcessing.Migrations
 {
     [DbContext(typeof(Order_Db))]
-    [Migration("20240506192748_ini")]
-    partial class ini
+    [Migration("20240524130846_int1")]
+    partial class int1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
