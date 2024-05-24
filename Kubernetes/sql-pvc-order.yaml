@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ordersql-pvc
-  namespace: app
+  name: orderdb-pvc
+  namespace: eatfresh
 spec:
-  storageClassName: eatfreshstorageclass
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rabbitmq-deployment
-  namespace: eatfresh
+  namespace: app
   labels:
     app: rabbitmq-deployment
 spec:

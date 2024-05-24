@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sql-deployment-order
-  namespace: app
+  namespace: eatfresh
 spec:
   replicas: 1
   selector:
@@ -17,7 +17,7 @@ spec:
       - name: sqlserver-order
         image: mcr.microsoft.com/mssql/server:2019-latest
         ports:
-        - containerPort: 1422
+        - containerPort: 1411
         env:
         - name: MSSQL_DATABASE
           value: "master"
@@ -33,15 +33,15 @@ spec:
               key: MSSQL_SA_PASSWORD
         resources:
           requests:
-            cpu: "150m"
-            memory: "64Mi"
+            memory: "250Mi"
+            cpu: "250m"
           limits:
-            cpu: "600m"
-            memory: "128Mi"
+            memory: "500Mi"
+            cpu: "500m"
         volumeMounts:
         - mountPath: /var/opt/mssql/data
           name: sql-persistent-storage-order
       volumes:
       - name: sql-persistent-storage-order
         persistentVolumeClaim:
-          claimName: ordersql-pvc
+          claimName:  orderdb-pvc

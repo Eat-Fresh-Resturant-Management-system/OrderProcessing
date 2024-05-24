@@ -24,8 +24,8 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
         }),
     ServiceLifetime.Singleton);
 // Tilføj denne linje for at angive levetiden som singleton
-builder.Services.AddSingleton<IRabbitMQ, RabbitMQUnti>();
-builder.Services.AddHostedService<RabbitMqServicecs>();
+//builder.Services.AddSingleton<IRabbitMQ, RabbitMQUnti>();
+//builder.Services.AddHostedService<RabbitMqServicecs>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -34,7 +34,7 @@ builder.Services.AddAuthentication(options =>
 }).AddJwtBearer(options =>
 {
     options.Authority = "https://dev-feeu3ze3mjv64zbn.eu.auth0.com/";
-    options.Audience = "https://www.eaau2024.com";
+    options.Audience = "https://swwao.orbit.au.dk/grp-13";
 });
 
 builder.Services.AddCors(options =>
