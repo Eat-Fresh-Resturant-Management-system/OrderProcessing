@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\migrations\\20240524130846_int1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\migrations\\20240524130846_int1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\migrations\\20240524130846_int1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\migrations\\20240524130846_int1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,23 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "20240524130846_int1.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240524130846_int1.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\Migrations\\20240524130846_int1.cs",
               "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240524130846_int1.cs",
               "RelativeToolTip": "OrderProcessing\\Migrations\\20240524130846_int1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T13:08:46.241Z"
+              "WhenOpened": "2024-05-24T13:08:46.241Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "20240524130053_int1.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240524130053_int1.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\Migrations\\20240524130053_int1.cs",
@@ -70,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\Models\\OrderItem.cs",
@@ -82,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Seed.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Data\\Seed.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\Data\\Seed.cs",
@@ -94,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "OrderItemsController.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Controllers\\OrderItemsController.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\Controllers\\OrderItemsController.cs",
@@ -102,12 +103,11 @@
               "RelativeToolTip": "OrderProcessing\\Controllers\\OrderItemsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T12:01:48.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T12:01:48.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RabbitMqServicecs.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\RabbitMQS\\RabbitMqServicecs.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\RabbitMQS\\RabbitMqServicecs.cs",
@@ -120,26 +120,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Program.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\Program.cs",
               "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Program.cs",
               "RelativeToolTip": "OrderProcessing\\Program.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAUwBcAAAALAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T10:30:43.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\appsettings.json",
               "RelativeDocumentMoniker": "OrderProcessing\\appsettings.json",
               "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\appsettings.json",
               "RelativeToolTip": "OrderProcessing\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-05-17T09:54:28.431Z",
               "EditorCaption": ""
