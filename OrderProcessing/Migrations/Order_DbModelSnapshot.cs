@@ -53,10 +53,16 @@ namespace OrderProcessing.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemId"));
 
+                    b.Property<byte[]>("ChangeCheck")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
                     b.Property<int>("Quantity")
+                        .IsConcurrencyToken()
                         .HasColumnType("int");
 
                     b.HasKey("OrderItemId");

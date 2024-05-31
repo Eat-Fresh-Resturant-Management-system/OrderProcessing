@@ -17,7 +17,18 @@ namespace OrderProcessing.Data
         public DbSet<OrderItem> OrderItems { get; set; }
 
         public DbSet<TableData> TableDatas { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+          /*  modelBuilder.Entity<OrderItem>()
+            .Property(p => p.Quantity)
 
+            .IsConcurrencyToken();
+          */
+            modelBuilder.Entity<OrderItem>()
+                .Property(p => p.ChangeCheck)
+                .IsRowVersion();
 
+        }
     }
+
 }

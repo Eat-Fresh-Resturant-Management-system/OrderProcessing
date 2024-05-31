@@ -142,133 +142,40 @@ namespace OrderProcessing.Controllers
             return CreatedAtAction("GetOrderItem", new { id = orderItem.OrderItemId }, orderItem);
         }
         [HttpPut("update/{id}")]
-        public async Task<IActionResult> UpdateOrderEmail(int id, OrderItemDto orderItemDto)
+        public async Task<IActionResult> UpdateOrderItem(int id, OrderItem orderItem)
         {
-            _logger.LogInformation("UpdateUser endpoint is called.");
+            _logger.LogInformation("UpdateOrder endpoint is called.");
 
             var order = await _context.OrderItems.FindAsync(id);
-            if (order == null || orderItemDto == null)
+            if (order == null || orderItem == null)
             {
                 return NotFound();
             }
-
-            if (orderItemDto.Price != null)
-            {
-                order.Price = orderItemDto.Price;
-            }
-
-            if (orderItemDto.Quantity != null)
-            {
-                order.Quantity = orderItemDto.Quantity;
-            }
+            if (order.Price != null) { order.Price = orderItem.Price ?? order.Price; }
+            else { order.Price = orderItem.Price; }
+            if (order.Quantity != null) { order.Quantity = orderItem.Quantity ?? order.Quantity; }
+            else { order.Quantity = orderItem.Quantity; }
             try
-            {
-                await _context.SaveChangesAsync();
-                _logger.LogInformation($"Updated order with orderId {id}");
-                await Task.Delay(10000);
-
-
-                return NoContent();
-                
-            }
-          
+            {          await _context.SaveChangesAsync();
+                _logger.LogInformation($"Updated order with orderId {id}");                               
+            }          
             catch (DbUpdateConcurrencyException ex)
             {
-
                 _logger.LogError("Concurrency conflict occurred while updating order: " + ex.Message);
-
-                // Reload the entity from the database to get the latest values
                 var entry = ex.Entries.FirstOrDefault();
                 if (entry != null)
                 {
                     if (order.Price != null) { entry.CurrentValues.SetValues(order.Price); }
                     if (order.Quantity != null) { entry.CurrentValues.SetValues(order.Quantity); }
 
-                    _logger.LogInformation($"Concurrency conflict resolved for user with userId {id}");
-                    // Optionally, you can check if the entity has been modified by another user before applying changes
-                    // _context.Entry(user).State = EntityState.Modified;
-
-                    try
-                    {
-                        await _context.SaveChangesAsync();
-                        _logger.LogInformation($"Concurrency conflict resolved for order with orderid {id}");
-                        return NoContent();
-                    }
-                    catch (DbUpdateConcurrencyException)
-                    {
-                        // Handle concurrency conflict
-                        _logger.LogError($"Failed to resolve concurrency conflict for order with orderid {id}");
-                        return StatusCode(409); // Conflict
-                    }
+                   _logger.LogInformation($"Concurrency conflict resolved for order with orderId {id}");         
+                  return NoContent();
                 }
-                // Handle other exceptions if needed
-                return StatusCode(500); // Internal Server Error
             }
+            return Ok();
+
         }
-        [HttpPut("update2/{id}")]
-        public async Task<IActionResult> UpdateUsereEmail(int id, OrderItemDto orderItemDto)
-        {
-            _logger.LogInformation("UpdateUser endpoint is called.");
 
-            var user = await _context.OrderItems.FindAsync(id);
-            if (user == null || orderItemDto == null)
-            {
-                return NotFound();
-            }
-
-            if (orderItemDto.Price != null)
-            {
-                user.Price = orderItemDto.Price;
-            }
-
-            if (orderItemDto.Quantity != null)
-            {
-                user.Quantity = orderItemDto.Quantity;
-            }
-
-            try
-            {
-                await Task.Delay(10000);
-
-                await _context.SaveChangesAsync();
-                _logger.LogInformation($"Updated user with userId {id}");
-
-                // Delay for 10 seconds before returning NoContent()
-
-                return NoContent();
-            }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                _logger.LogError("Concurrency conflict occurred while updating user: " + ex.Message);
-
-                // Reload the entity from the database to get the latest values
-                var entry = ex.Entries.FirstOrDefault();
-                if (entry != null)
-                {
-                    if (user.Price != null) { entry.CurrentValues.SetValues(user.Price); }
-                    if (user.Quantity != null) { entry.CurrentValues.SetValues(user.Quantity); }
-
-                    _logger.LogInformation($"Concurrency conflict resolved for user with userId {id}");
-                    // Optionally, you can check if the entity has been modified by another user before applying changes
-                    // _context.Entry(user).State = EntityState.Modified;
-
-                    try
-                    {
-                        await _context.SaveChangesAsync();
-                        _logger.LogInformation($"Concurrency conflict resolved for user with userId {id}");
-                        return NoContent();
-                    }
-                    catch (DbUpdateConcurrencyException)
-                    {
-                        // Handle concurrency conflict
-                        _logger.LogError($"Failed to resolve concurrency conflict for user with userId {id}");
-                        return StatusCode(409); // Conflict
-                    }
-                }
-                // Handle other exceptions if needed
-                return StatusCode(500); // Internal Server Error
-            }
-        }
 
         // DELETE: api/OrderItems/5
         [HttpDelete("{id}")]

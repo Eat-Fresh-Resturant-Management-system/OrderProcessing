@@ -8,8 +8,13 @@ namespace OrderProcessing.Models
 
         [Key]
         public int OrderItemId { get; set; }
-        public int Quantity { get; set; }
-        public float Price { get; set; }
+
+        [ConcurrencyCheck]
+      
+        public int? Quantity { get; set; }
+        public float? Price { get; set; }
+        [Timestamp]
+        public byte[]? ChangeCheck { get; set; }
 
 
     }

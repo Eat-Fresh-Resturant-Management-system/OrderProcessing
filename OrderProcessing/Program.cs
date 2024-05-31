@@ -23,7 +23,6 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
             sqlOptions.EnableRetryOnFailure();
         }),
     ServiceLifetime.Singleton);
-// Tilføj denne linje for at angive levetiden som singleton
 builder.Services.AddSingleton<IRabbitMQ, RabbitMQUnti>();
 builder.Services.AddHostedService<RabbitMqServicecs>();
 

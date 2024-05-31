@@ -12,8 +12,8 @@ using OrderProcessing.Data;
 namespace OrderProcessing.Migrations
 {
     [DbContext(typeof(Order_Db))]
-    [Migration("20240524130846_int1")]
-    partial class int1
+    [Migration("20240531011112_init1e")]
+    partial class init1e
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,10 +56,16 @@ namespace OrderProcessing.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemId"));
 
+                    b.Property<byte[]>("ChangeCheck")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
                     b.Property<int>("Quantity")
+                        .IsConcurrencyToken()
                         .HasColumnType("int");
 
                     b.HasKey("OrderItemId");
