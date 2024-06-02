@@ -11,8 +11,6 @@ using OrderProcessing.Models;
 
 namespace OrderProcessing.Controllers
 {
-
-
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase

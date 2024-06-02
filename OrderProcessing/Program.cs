@@ -48,7 +48,6 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Migrate database
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<Order_Db>();
@@ -56,12 +55,12 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline.
+
+
 if (app.Environment.IsDevelopment())
-{
-    using var scope = app.Services.CreateScope();
+{    using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<Order_Db>();
     db.Database.EnsureCreated();
- 
 
 }
 app.UseSwagger();

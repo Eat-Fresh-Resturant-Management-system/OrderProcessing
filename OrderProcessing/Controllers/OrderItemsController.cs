@@ -20,8 +20,7 @@ namespace OrderProcessing.Controllers
 
         public OrderItemsController(Order_Db context )
         {
-            _context = context;
-           
+            _context = context;         
 
         }
 
@@ -35,12 +34,7 @@ namespace OrderProcessing.Controllers
           }
             return await _context.OrderItems.ToListAsync();
         }
-        [HttpGet("tezxt")]
-        public async Task<ActionResult<IEnumerable<OrderItem>>> GetOrderI2tems()
-        {
-            return Ok("dasd");
-        }
-     
+      
         // GET: api/OrderItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<OrderItem>> GetOrderItem(string id)
@@ -58,88 +52,28 @@ namespace OrderProcessing.Controllers
 
             return orderItem;
         }
-        [HttpPost("CreatIe")]
-        public async Task<IActionResult> CreateFamily([FromBody] OrderItemDto familyDto)
+        [HttpPost("CreatOrder")]
+        public async Task<IActionResult> CreateOrder([FromBody] OrderItemDto orderDto)
         {
-
-          
-            // Check if the user already has a family
+                     
            
 
-            var family = new OrderItem
+            var order = new OrderItem
             {
-                Price = familyDto.Price,
-                Quantity = familyDto.Quantity,
+                Price = orderDto.Price,
+                Quantity = orderDto.Quantity,
             };
 
 
-            _context.OrderItems.Add(family);
+            _context.OrderItems.Add(order);
 
-            // Set HasFamily property to true for the user
 
             await _context.SaveChangesAsync();
 
-            return Ok("order created successfully");
+            return Ok("Order created successfully");
         }
-        // PUT: api/OrderItems/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutOrderItem(int id, OrderItem orderItem)
-        {
-            if (id != orderItem.OrderItemId)
-            {
-                return BadRequest();
-            }
+    
 
-            _context.Entry(orderItem).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!OrderItemExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/OrderItems
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<OrderItem>> PostOrderItem(OrderItem orderItem)
-        {
-          if (_context.OrderItems == null)
-          {
-              return Problem("Entity set 'Order_Db.OrderItems'  is null.");
-          }
-            _context.OrderItems.Add(orderItem);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (OrderItemExists(orderItem.OrderItemId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetOrderItem", new { id = orderItem.OrderItemId }, orderItem);
-        }
         [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateOrderItem(int id, OrderItem orderItem)
         {
