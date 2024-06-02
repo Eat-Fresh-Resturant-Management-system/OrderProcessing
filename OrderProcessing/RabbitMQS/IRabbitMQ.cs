@@ -7,7 +7,7 @@ namespace OrderProcessing.RabbitMQS
     {
 
 
-        Task ResTable(IModel channel, string rout, CancellationToken cancellationToken);
+        Task ReceiveTable(IModel channel, string Key, CancellationToken cancellationToken);
 
 
 

@@ -9,13 +9,10 @@ namespace OrderProcessing.RabbitMQS
         private  IModel _channel;
         private  IConnection _connection;
 
-        public RabbitMqServicecs(IRabbitMQ rabbitMQ) {
-
+        public RabbitMqServicecs(IRabbitMQ rabbitMQ) 
+        {
 
             _rabbitMQ = rabbitMQ;
-
-
-
         }
 
         public override Task StartAsync(CancellationToken cancellationToken)
@@ -24,15 +21,10 @@ namespace OrderProcessing.RabbitMQS
 
             var factory = new ConnectionFactory
             {
-              //  Uri = new Uri("amqp://guest:guest@rabbitmq-service:5672"),
-
-                Uri = new Uri("amqp://guest:guest@rabbitmq-service:5672"),
-              /* HostName = "localhost",
-               UserName = "guest",
-               Password = "guest",*/
-
+                Uri = new Uri("amqp://guest:guest@rabbitmq.rabbitmq.svc.cluster.local:5672"),
                 DispatchConsumersAsync = true,
-            };
+
+            }; 
 
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
@@ -42,7 +34,7 @@ namespace OrderProcessing.RabbitMQS
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
 
-            await _rabbitMQ.ResTable(_channel, "Table.Booking", stoppingToken);
+            await _rabbitMQ.ReceiveTable(_channel, "table_booking_queue", stoppingToken);
 
 
         }

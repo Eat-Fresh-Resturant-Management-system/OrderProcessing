@@ -13,6 +13,7 @@ namespace OrderProcessing.Models
       
         public int? Quantity { get; set; }
         public float? Price { get; set; }
+
         [Timestamp]
         public byte[]? ChangeCheck { get; set; }
 

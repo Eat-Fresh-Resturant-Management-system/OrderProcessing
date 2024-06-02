@@ -25,7 +25,7 @@ namespace OrderProcessing.RabbitMQS
 
         }
 
-        public async Task ResTable(IModel channel, string rout, CancellationToken cancellationToken)
+        public async Task ReceiveTable(IModel channel, string Key, CancellationToken cancellationToken)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace OrderProcessing.RabbitMQS
 
                 channel.QueueBind(queue: queueName,
                         exchange: "table_booking_exchange",
-                        routingKey: "Table.Booking");
+                        routingKey: "table_booking_queue");
 
 
                 var con = new AsyncEventingBasicConsumer(channel);
@@ -46,38 +46,33 @@ namespace OrderProcessing.RabbitMQS
                         var body = ea.Body.ToArray();
                         var message = Encoding.UTF8.GetString(body);
                         var routingKey = ea.RoutingKey;
-                        string[] messageparts = message.Split('-');
+                      //  string[] messageparts = message.Split('-');
 
-                        // Log modtaget besked
                         Console.WriteLine($"Received message: {message}");
+                        var tablebooking = await _context.TableDatas.FirstOrDefaultAsync(t => t.Name == message);
 
-                        if (int.TryParse(messageparts[0], out int tabelId))
-                        {
-                            var putuser = await _context.TableDatas.FindAsync(tabelId);
-                            if (putuser != null)
+                      
+                           if (tablebooking == null)
                             {
-                                if (putuser.IsAvailable != null)
-                                {
-                                    putuser.IsAvailable = messageparts[1] ?? putuser.IsAvailable;
-                                }
-                                else
-                                {
-                                    putuser.IsAvailable = messageparts[1];
-                                }
 
-                                await _context.SaveChangesAsync(cancellationToken);
+                            TableData newtable = new TableData();
+                            newtable.Name = message;
+                            newtable.IsAvailable = "true";
+                            await _context.TableDatas.AddAsync(newtable);
+                            await _context.SaveChangesAsync();
 
-                                Console.WriteLine($"Update succeeded for ID: {messageparts[0]}, New Status: {messageparts[1]}");
+
+
+                            
                             }
                             else
                             {
-                                Console.WriteLine($"Tabel with ID {messageparts[0]} not found.");
+                            tablebooking.IsAvailable = "true"; // Assuming IsAvailable is a string, change to bool if necessary
+                            await _context.SaveChangesAsync(cancellationToken);
+                            Console.WriteLine($"Update succeeded for: {message}, New Status: {tablebooking.IsAvailable}");
                             }
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Invalid ID format: {messageparts[0]}");
-                        }
+                      
+                     
                     }
                     catch (Exception ex)
                     {

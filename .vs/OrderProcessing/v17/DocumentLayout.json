@@ -7,44 +7,16 @@
       "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\data\\order_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\data\\order_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531011112_init1e.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OrderProcessing\\Migrations\\20240531011112_init1e.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531010505_init1e.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OrderProcessing\\Migrations\\20240531010505_init1e.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\rabbitmqs\\rabbitmqservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531003952_init1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OrderProcessing\\Migrations\\20240531003952_init1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240524130053_int1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OrderProcessing\\Migrations\\20240524130053_int1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|c:\\users\\maher\\desktop\\prj7\\eatfresh.orderprocessing\\orderprocessing\\rabbitmqs\\rabbitmqunti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25B76AFC-62F0-4653-8DD5-AF6069649292}|OrderProcessing\\OrderProcessing.csproj|solutionrelative:orderprocessing\\rabbitmqs\\rabbitmqunti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,95 +26,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240531010505_init1e.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531010505_init1e.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Migrations\\20240531010505_init1e.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531010505_init1e.cs",
-              "RelativeToolTip": "OrderProcessing\\Migrations\\20240531010505_init1e.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Program.cs",
+              "RelativeDocumentMoniker": "OrderProcessing\\Program.cs",
+              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Program.cs",
+              "RelativeToolTip": "OrderProcessing\\Program.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T01:05:05.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20240531003952_init1.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531003952_init1.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Migrations\\20240531003952_init1.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531003952_init1.cs",
-              "RelativeToolTip": "OrderProcessing\\Migrations\\20240531003952_init1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T00:39:53.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Order_Db.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Data\\Order_Db.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Data\\Order_Db.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Data\\Order_Db.cs",
-              "RelativeToolTip": "OrderProcessing\\Data\\Order_Db.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAewBkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T00:29:29.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20240524130053_int1.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240524130053_int1.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Migrations\\20240524130053_int1.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240524130053_int1.cs",
-              "RelativeToolTip": "OrderProcessing\\Migrations\\20240524130053_int1.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T13:00:53.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Models\\OrderItem.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Models\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Models\\OrderItem.cs",
-              "RelativeToolTip": "OrderProcessing\\Models\\OrderItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T12:55:39.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Seed.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Data\\Seed.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Data\\Seed.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Data\\Seed.cs",
-              "RelativeToolTip": "OrderProcessing\\Data\\Seed.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:42:13.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Controllers\\OrderItemsController.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Controllers\\OrderItemsController.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Controllers\\OrderItemsController.cs",
-              "RelativeToolTip": "OrderProcessing\\Controllers\\OrderItemsController.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAwwK0AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T12:01:48.691Z",
+              "WhenOpened": "2024-06-02T15:45:04.387Z",
               "EditorCaption": ""
             },
             {
@@ -153,48 +49,35 @@
               "RelativeDocumentMoniker": "OrderProcessing\\appsettings.json",
               "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\appsettings.json",
               "RelativeToolTip": "OrderProcessing\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-17T09:54:28.431Z",
+              "WhenOpened": "2024-06-02T15:20:46.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Program.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Program.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Program.cs",
-              "RelativeToolTip": "OrderProcessing\\Program.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "RabbitMQUnti.cs",
+              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\RabbitMQS\\RabbitMQUnti.cs",
+              "RelativeDocumentMoniker": "OrderProcessing\\RabbitMQS\\RabbitMQUnti.cs",
+              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\RabbitMQS\\RabbitMQUnti.cs",
+              "RelativeToolTip": "OrderProcessing\\RabbitMQS\\RabbitMQUnti.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAIwF0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T10:30:43.552Z",
+              "WhenOpened": "2024-06-02T15:00:24.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20240531011112_init1e.cs",
-              "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531011112_init1e.cs",
-              "RelativeDocumentMoniker": "OrderProcessing\\Migrations\\20240531011112_init1e.cs",
-              "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\Migrations\\20240531011112_init1e.cs",
-              "RelativeToolTip": "OrderProcessing\\Migrations\\20240531011112_init1e.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T01:11:12.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "RabbitMqServicecs.cs",
               "DocumentMoniker": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\RabbitMQS\\RabbitMqServicecs.cs",
               "RelativeDocumentMoniker": "OrderProcessing\\RabbitMQS\\RabbitMqServicecs.cs",
               "ToolTip": "C:\\Users\\maher\\Desktop\\PRJ7\\eatfresh.orderprocessing\\OrderProcessing\\RabbitMQS\\RabbitMqServicecs.cs",
               "RelativeToolTip": "OrderProcessing\\RabbitMQS\\RabbitMqServicecs.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCQAAAAMAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T12:00:44.913Z",
+              "WhenOpened": "2024-06-02T14:59:03.182Z",
               "EditorCaption": ""
             }
           ]

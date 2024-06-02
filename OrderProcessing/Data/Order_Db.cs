@@ -24,6 +24,7 @@ namespace OrderProcessing.Data
 
             .IsConcurrencyToken();
           */
+
             modelBuilder.Entity<OrderItem>()
                 .Property(p => p.ChangeCheck)
                 .IsRowVersion();

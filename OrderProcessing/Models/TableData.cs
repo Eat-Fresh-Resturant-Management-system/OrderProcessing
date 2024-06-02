@@ -6,6 +6,7 @@
        // public Guid TableId { get; set; }
         public string IsAvailable { get; set; }
 
+        public string Name { get; set; }
 
 
 

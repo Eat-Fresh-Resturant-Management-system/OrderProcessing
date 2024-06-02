@@ -17,12 +17,11 @@ namespace OrderProcessing.Controllers
     public class OrderItemsController : ControllerBase
     {
         private readonly Order_Db _context;
-        private readonly ILogger<OrderItemsController> _logger;
 
-        public OrderItemsController(Order_Db context, ILogger<OrderItemsController> logger)
+        public OrderItemsController(Order_Db context )
         {
             _context = context;
-            _logger = logger;
+           
 
         }
 
@@ -144,7 +143,7 @@ namespace OrderProcessing.Controllers
         [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateOrderItem(int id, OrderItem orderItem)
         {
-            _logger.LogInformation("UpdateOrder endpoint is called.");
+            
 
             var order = await _context.OrderItems.FindAsync(id);
             if (order == null || orderItem == null)
@@ -157,18 +156,16 @@ namespace OrderProcessing.Controllers
             else { order.Quantity = orderItem.Quantity; }
             try
             {          await _context.SaveChangesAsync();
-                _logger.LogInformation($"Updated order with orderId {id}");                               
+                                              
             }          
             catch (DbUpdateConcurrencyException ex)
             {
-                _logger.LogError("Concurrency conflict occurred while updating order: " + ex.Message);
+                
                 var entry = ex.Entries.FirstOrDefault();
                 if (entry != null)
                 {
                     if (order.Price != null) { entry.CurrentValues.SetValues(order.Price); }
-                    if (order.Quantity != null) { entry.CurrentValues.SetValues(order.Quantity); }
-
-                   _logger.LogInformation($"Concurrency conflict resolved for order with orderId {id}");         
+                    if (order.Quantity != null) { entry.CurrentValues.SetValues(order.Quantity); }                    
                   return NoContent();
                 }
             }
