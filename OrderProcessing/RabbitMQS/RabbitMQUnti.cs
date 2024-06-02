@@ -1,13 +1,8 @@
-﻿using System;
+﻿
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json.Linq;
 using OrderProcessing.Data;
 using OrderProcessing.Models;
-
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
@@ -17,14 +12,11 @@ namespace OrderProcessing.RabbitMQS
     {
         private readonly IServiceScopeFactory _serviceScopeFactory;
         private readonly Order_Db _context;
-
         public RabbitMQUnti(Order_Db context, IServiceScopeFactory serviceScopeFactory)
         {
             _serviceScopeFactory = serviceScopeFactory;
             _context = context;
-
         }
-
         public async Task ReceiveTable(IModel channel, string Key, CancellationToken cancellationToken)
         {
             try
@@ -46,36 +38,26 @@ namespace OrderProcessing.RabbitMQS
                         var body = ea.Body.ToArray();
                         var message = Encoding.UTF8.GetString(body);
                         var routingKey = ea.RoutingKey;
-                      //  string[] messageparts = message.Split('-');
-
                         Console.WriteLine($"Received message: {message}");
-                        var tablebooking = await _context.TableDatas.FirstOrDefaultAsync(t => t.Name == message);
-
-                      
+                        var tablebooking = await _context.TableDatas.FirstOrDefaultAsync(t => t.Name == message);                      
                            if (tablebooking == null)
                             {
-
                             TableData newtable = new TableData();
                             newtable.Name = message;
-                            newtable.IsAvailable = "true";
+                            newtable.IsAvailable = "false";
                             await _context.TableDatas.AddAsync(newtable);
                             await _context.SaveChangesAsync();
-
-
-
-                            
+                            Console.WriteLine($"Added succeeded for: {message}, New Status: {newtable.IsAvailable}");
                             }
-                            else
+                        else
                             {
-                            tablebooking.IsAvailable = "true"; // Assuming IsAvailable is a string, change to bool if necessary
+                            tablebooking.IsAvailable = "false"; 
                             await _context.SaveChangesAsync(cancellationToken);
-                            Console.WriteLine($"Update succeeded for: {message}, New Status: {tablebooking.IsAvailable}");
-                            }
-                      
-                     
-                    }
+                            Console.WriteLine($"Updated succeeded for: {message}, New Status: {tablebooking.IsAvailable}");
+                            }                     
+                        }
                     catch (Exception ex)
-                    {
+                        {
                         Console.WriteLine($"Error processing message: {ex.Message}");
                     }
                 };
